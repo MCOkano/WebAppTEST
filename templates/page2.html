@@ -30,28 +30,12 @@
       <h1>{{str1}}</h1>
       <p>{{text}}</p>
 
-      <h3>arrをfor loop で表示</h3>
-      <ul>
-      {% for i in arr %}   
-         {% for j in i %}
-            <li>{{ j }}</li>
-         {% endfor %}
-      {% endfor %}
-      </ul>
-
       <h3>arr2をfor loop で表示</h3>
       <ul>
       {% for i in arr2 %}   
          {% for j in i %}
             <li>{{ j }}</li>
          {% endfor %}
-      {% endfor %}
-      </ul>
-
-      <h3>arr2をfor loop で1次元表示</h3>
-      <ul>
-      {% for i in arr2 %}   
-         <li>{{ i }}</li>
       {% endfor %}
       </ul>
 
