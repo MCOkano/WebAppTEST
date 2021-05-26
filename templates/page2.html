@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>テスト</title>
+        <style>
+            ul {
+               margin: 0;
+               padding: 0;
+               list-style-type: none;
+               border-top: solid 1px #203040;
+            }
+
+            ul li{
+               padding: 10px 20px; /*余白*/
+               background: #e3f6f5; /*背景色*/
+               border-bottom: solid 1px #3dbfb8;
+            }
+        </style> 
+    </head>
+    <body>
+      <form action = "/" method = "POST">
+         <H1>HTMLとのやり取りをテストするアプリケーション</H1>
+         <h1>入力</h1>
+         <textarea type="text" name="name" placeholder="IDを入力"></textarea>
+         <br>
+         <input type="submit" value="実行">
+      </form>
+      <h1>出力</h1>
+      <h1>{{str1}}</h1>
+      <p>{{text}}</p>
+
+      <h3>arrをfor loop で表示</h3>
+      <ul>
+      {% for i in arr %}   
+         {% for j in i %}
+            <li>{{ j }}</li>
+         {% endfor %}
+      {% endfor %}
+      </ul>
+
+      <h3>arr2をfor loop で表示</h3>
+      <ul>
+      {% for i in arr2 %}   
+         {% for j in i %}
+            <li>{{ j }}</li>
+         {% endfor %}
+      {% endfor %}
+      </ul>
+
+      <h3>arr2をfor loop で1次元表示</h3>
+      <ul>
+      {% for i in arr2 %}   
+         <li>{{ i }}</li>
+      {% endfor %}
+      </ul>
+
+      <h3>listをfor loop で文字列リスト表示</h3>
+      <ul>
+      {% for i in list %}   
+         <li>{{ i }}</li>
+      {% endfor %}
+      </ul>
+
+      <h3>arr2をfor loop でテーブル表示</h3>
+      <table border="1" bordercolor = #6A5ACD width="200">
+         <tr bgcolor=#00FFFF>
+            <th>選択ID</th>
+            <th>該当内容</th>
+         </tr>
+         {% for i in arr2 %}   
+            <tr>
+               {% for j in i %}
+                  <td>{{ j }}</td>
+               {% endfor %}
+            </tr>
+         {% endfor %}
+      </table>
+
+   </body>
+</html>
