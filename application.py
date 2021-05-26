@@ -38,13 +38,13 @@ def main_page_GET():
 def main_page_POST():
     name = request.form["name"]
 
- #   cn,cur = connectSQL()
+    cn,cur = connectSQL()
 
- #   cur.execute("select * from Tbl_D_注文書番号")
- #   rows = cur.fetchall()
+    cur.execute("select * from Tbl_D_注文書番号")
+    rows = cur.fetchall()
 
- #   closeSQL(cur,cn)
-    rows = [['0','Aa'],['1','Bb'],['2','Cc'],['3','D'],['4','E'],['5','F'],['2','G']]
+    closeSQL(cur,cn)
+ #   rows = [['0','Aa'],['1','Bb'],['2','Cc'],['3','D'],['4','E'],['5','F'],['2','G']]
 
     rows2 = []
 
