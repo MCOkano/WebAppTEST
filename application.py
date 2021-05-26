@@ -53,12 +53,12 @@ def main_page_POST():
     text = "該当データなし"
     str1 = "文字列2"
     for r in rows:
-        print("r[0] " + r[0])
+        print("r[0] " + str(r[0]))
         print("name " + name)
-        if name == r[0]:
+        if name == str(r[0]):
             text = "選択ID：" + name + "    該当内容：" + r[1]
             list.append(text)
-            text2 = r[0] , r[1]
+            text2 = str(r[0]) , r[1]
             rows2.append(text2)
             print(list)
             print(rows2)
